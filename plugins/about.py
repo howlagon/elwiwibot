@@ -33,7 +33,7 @@ async def about(ctx: lightbulb.Context) -> None:
     if commit_hash or commit_message:
         embed.add_field("Bot version", f"`{commit_hash}`", inline=True)
         embed.add_field("Latest change", commit_message, inline=True)
-    embed.add_field("Python version", f"`{version}`", inline=True)
+    embed.add_field("Python version", f"`{version.split(' ')[0]}`", inline=True)
     embed.add_field("Hikari version", f"`{hikari.__version__}`", inline=True)
     embed.add_field("Lightbulb version", f"`{lightbulb.__version__}`", inline=True)
     
